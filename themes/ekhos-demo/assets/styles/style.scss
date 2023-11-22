@@ -22,10 +22,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 
   & > .container {
     position: relative;
     z-index: 0;
     width: 100%;
+    overflow-x: hidden;
   }
 }

@@ -24,6 +24,8 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_product_image.png" alt="visual">
         </div>
     </div>
+
+    <div class="section-splitter"></div>
 </section>
 
 <section class="section section-home" id="sound">
@@ -37,6 +39,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_sound_image.png" alt="visual">
         </div>
     </div>
+    <div class="section-splitter"></div>
 </section>
 
 <section class="section section-home" id="story">

@@ -1,11 +1,43 @@
 @import "./../functions.scss";
 
-.section-home#hero{
+.section {
+  &-splitter {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(50%);
+    height: 25%;
+    width: .2rem;
+    border-right: .5rem dotted #4953DF;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: calc(50% + .3rem);
+      transform: translate(-50%, -100%);
+      @include icon("\e5cf", 8rem);
+      color: #4953DF;
+      font-weight: 800;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: calc(50% + .3rem);
+      transform: translate(-50%, 100%);
+      @include icon("\e5cf", 8rem);
+      color: #4953DF;
+      font-weight: 800;
+    }
+  }
+}
+
+.section-home#hero {
   position: relative;
   display: flex;
   justify-content: center;
 
-  .hero{
+  .hero {
     &_container {
       z-index: 1;
       @include container();
@@ -47,7 +79,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
 
   .product {
     &_container {
@@ -59,6 +90,10 @@
       justify-content: center;
       min-height: 100vh;
       max-height: 108rem;
+
+      @include mobile {
+        flex-direction: column-reverse;
+      }
     }
 
     &_text {
@@ -67,13 +102,26 @@
       display: flex;
       flex-direction: column;
 
+      @include mobile {
+        padding-top: 8rem;
+        width: 100%;
+      }
+
       h2 {
         @include font($title, 3.2rem, 600, $color1);
+
+        @include mobile {
+          text-align: center;
+        }
       }
 
       p {
         padding-top: 6rem;
         @include font($text, 2.4rem, 500, $color1);
+
+        @include mobile {
+          text-align: center;
+        }
       }
     }
 
@@ -82,6 +130,10 @@
       width: 50%;
       padding-left: 4rem;
       box-sizing: border-box;
+
+      @include mobile {
+        width: 100%;
+      }
 
       img {
         position: relative;
@@ -100,6 +152,12 @@
         width: 50vw;
         height: 25rem;
         background-color: #4953DF;
+
+        @include mobile {
+          width: 100vw;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
   }
@@ -109,7 +167,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
 
   .sound {
     &_container {
@@ -121,6 +178,10 @@
       justify-content: center;
       min-height: 100vh;
       max-height: 108rem;
+
+      @include mobile {
+        flex-direction: column-reverse;
+      }
     }
 
     &_text {
@@ -129,13 +190,26 @@
       display: flex;
       flex-direction: column;
 
+      @include mobile {
+        padding-top: 8rem;
+        width: 100%;
+      }
+
       h2 {
         @include font($title, 3.2rem, 600, $color1);
+
+        @include mobile {
+          text-align: center;
+        }
       }
 
       p {
         padding-top: 6rem;
         @include font($text, 2.4rem, 500, $color1);
+
+        @include mobile {
+          text-align: center;
+        }
       }
     }
 
@@ -144,6 +218,10 @@
       width: 50%;
       padding-left: 4rem;
       box-sizing: border-box;
+
+      @include mobile {
+        width: 100%;
+      }
 
       img {
         position: relative;
@@ -162,6 +240,12 @@
         width: 50vw;
         height: 25rem;
         background-color: #4953DF;
+
+        @include mobile {
+          width: 100vw;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
   }
@@ -171,7 +255,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
 
   .story {
     &_container {
@@ -188,7 +271,7 @@
     &_action {
       padding-top: 6rem;
 
-      &::before{
+      &::before {
         @include icon("\e5cf", 8rem);
         font-weight: 800;
         color: #4953DF;
@@ -210,7 +293,7 @@
 
       p {
         padding-top: 6rem;
-        @include font($text, 2.4rem, 500, $color1 , $textAlign: center);
+        @include font($text, 2.4rem, 500, $color1, $textAlign: center);
       }
     }
 
